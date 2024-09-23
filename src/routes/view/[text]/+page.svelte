@@ -1,5 +1,6 @@
 <script>
 	import DarkModeToggle from "$lib/theme/DarkModeToggle.svelte";
+	import LinkToGithub from "$lib/theme/LinkToGithub.svelte";
 
 	let { data } = $props();
 	let i = $state(0);
@@ -32,9 +33,10 @@
 
 <aside class="absolute right-4 top-4">
 	<DarkModeToggle />
+  <LinkToGithub/>
 </aside>
 
 <main class="flex h-screen w-full flex-col items-center justify-center bg-white text-black dark:bg-black dark:text-white">
-	<p class="text-center text-6xl">{currentWord}</p>
-	<p class="text-6xl text-transparent">a</p>
+	<p class="text-center text-4xl sm:text-6xl">{currentWord}</p>
+	<p class="text-4xl sm:text-6xl text-transparent">a</p>
 </main>

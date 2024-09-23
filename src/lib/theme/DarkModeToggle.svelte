@@ -34,7 +34,7 @@
 	}
 </script>
 
-<button on:click={() => toggle()} class="i-carbon-sun dark:i-carbon-moon text-2xl dark:text-white"></button>
+<button onclick={() => toggle()} class="i-carbon-sun dark:i-carbon-moon text-2xl dark:text-white">Dark mode togle</button>
 
 <style>
 </style>

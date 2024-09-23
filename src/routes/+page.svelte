@@ -3,6 +3,7 @@
 	import DarkModeToggle from "$lib/theme/DarkModeToggle.svelte";
 	import { fade } from "svelte/transition";
 	import { page } from "$app/stores";
+	import LinkToGithub from "$lib/theme/LinkToGithub.svelte";
 
 	let { data } = $props();
 	let textareaRef: HTMLTextAreaElement;
@@ -41,10 +42,14 @@
 	}
 </script>
 
+<aside class="absolute right-4 top-4">
+	<DarkModeToggle />
+  <LinkToGithub/>
+</aside>
+
 <main class="flex h-screen w-full justify-center bg-white text-black dark:bg-black dark:text-white">
 	<div class="flex flex-col gap-4 p-2">
-		<DarkModeToggle />
-		<textarea bind:this={textareaRef} class="h-[400px] w-[600px] text-black dark:bg-black dark:text-white">{data.defaultText}</textarea>
+		<textarea bind:this={textareaRef} class="sm:h-[400px] h-[800px] w-64 sm:w-[600px] text-black dark:bg-black dark:text-white">{data.defaultText}</textarea>
 		<button
 			onclick={() => {
 				if (copyLinkToClipboard(textareaRef.value)) {
@@ -63,8 +68,8 @@
 		<button onclick={() => (i ? stopInterval() : startInterval())} class="rounded-md border border-black px-6 py-4 font-semibold dark:border-white"
 			>{i ? "Stop" : "Start"} preview</button>
 		{#if message}
-			<p transition:fade class={messageColor}>{message}</p>
+			<p transition:fade class="{messageColor} w-48">{message}</p>
 		{/if}
-		<p class="text-center text-6xl">{currentWord}</p>
+		<p class="text-center text-4xl sm:text-6xl">{currentWord}</p>
 	</div>
 </main>
