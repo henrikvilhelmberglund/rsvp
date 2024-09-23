@@ -31,6 +31,8 @@
 	startInterval();
 </script>
 
+<a href="/" class="absolute px-4 py-2 dark:text-white underline">Back</a>
+
 <aside class="absolute right-4 top-4">
 	<DarkModeToggle />
   <LinkToGithub/>
