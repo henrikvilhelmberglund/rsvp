@@ -1,4 +1,3 @@
-import transformerVariantGroup from "@unocss/transformer-variant-group";
 import { defineConfig, presetIcons, presetUno, presetWebFonts } from "unocss";
 import { presetForms } from "@julr/unocss-preset-forms";
 import { presetHeroPatterns } from "@julr/unocss-preset-heropatterns";
@@ -58,5 +57,4 @@ export default defineConfig({
 			}
 		})
 	],
-	transformers: [transformerVariantGroup()]
 });
