@@ -50,18 +50,14 @@
 				if (copyLinkToClipboard(textareaRef.value)) {
 					message = "Successfully copied link to clipboard!";
 					messageColor = "text-green-500 border-green-500";
-					setTimeout(() => {
-						message = "";
-						messageColor = "";
-					}, 700);
 				} else {
 					message = "Error: could not save link to clipboard";
 					messageColor = "text-red-500 border-red-500";
-					setTimeout(() => {
-						message = "";
-						messageColor = "";
-					}, 700);
 				}
+				setTimeout(() => {
+					message = "";
+					messageColor = "";
+				}, 700);
 			}}
 			class="rounded-md border border-black px-6 py-4 font-semibold dark:border-white">Copy link to clipboard</button>
 		<button onclick={() => (i ? stopInterval() : startInterval())} class="rounded-md border border-black px-6 py-4 font-semibold dark:border-white"
