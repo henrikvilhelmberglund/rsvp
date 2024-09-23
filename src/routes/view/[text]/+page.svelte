@@ -13,8 +13,8 @@
 		intervalRef = setInterval(() => {
 			if (data.text.split(/\s+/)[i]) {
 				currentWord = data.text.split(/\s+/)[i];
-				i++;
 			}
+			i++;
 			if (i > data.text.split(/\s+/).length) {
 				stopInterval();
 				startInterval();
@@ -31,14 +31,14 @@
 	startInterval();
 </script>
 
-<a href="/" class="absolute px-4 py-2 dark:text-white underline">Back</a>
+<a href="/" class="absolute px-4 py-2 underline dark:text-white">Back</a>
 
 <aside class="absolute right-4 top-4">
 	<DarkModeToggle />
-  <LinkToGithub/>
+	<LinkToGithub />
 </aside>
 
 <main class="flex h-screen w-full flex-col items-center justify-center bg-white text-black dark:bg-black dark:text-white">
 	<p class="text-center text-4xl sm:text-6xl">{currentWord}</p>
-	<p class="text-4xl sm:text-6xl text-transparent">a</p>
+	<p class="text-4xl text-transparent sm:text-6xl">a</p>
 </main>
