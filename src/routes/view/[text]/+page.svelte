@@ -15,7 +15,7 @@
 				i++;
 			}
 			if (i > data.text.split(/\s+/).length - 1) {
-				clearInterval(intervalRef);
+				stopInterval();
 				startInterval();
 			}
 		}, intervalTime);
