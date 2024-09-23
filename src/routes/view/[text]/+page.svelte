@@ -15,7 +15,7 @@
 				currentWord = data.text.split(/\s+/)[i];
 				i++;
 			}
-			if (i > data.text.split(/\s+/).length - 1) {
+			if (i > data.text.split(/\s+/).length) {
 				stopInterval();
 				startInterval();
 			}
