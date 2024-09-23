@@ -3,6 +3,7 @@
   "version": "0.0.0",
   "devDependencies": {
     "@iconify-json/carbon": "^1.2.1",
+    "@iconify-json/logos": "^1.2.0",
     "@julr/unocss-preset-forms": "^0.1.0",
     "@julr/unocss-preset-heropatterns": "^1.0.2",
     "@playwright/test": "^1.47.2",
